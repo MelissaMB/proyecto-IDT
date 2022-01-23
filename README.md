@@ -39,3 +39,6 @@ A continuación, se detalla los pasos del modelo de negocio para la obtención d
 
 Se le aplicará SCD tipo 1 a las siguientes dimensiones: <i>Orden Dimensión, Customer Dimensión, Vendor Dimensión, Location Dimension</i>.
 </p>
+
+<h2>Arquitectura Funcional</h2>
+<img src="https://user-images.githubusercontent.com/18757517/150696635-0b4a95d2-5629-4f35-bbd5-f6f543c9c385.png" >
