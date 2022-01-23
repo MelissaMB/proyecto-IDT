@@ -1,0 +1,106 @@
+*********************************************************
+create table public.order(
+  order_key varchar(50) not null distkey,
+  promo_code varchar(20),
+  rated varchar(2),
+  delivery_distance varchar(10),
+  payment_mode varchar(10)
+);
+
+**********************************************************
+
+create table public.customer(
+  customer_key varchar(50) not null distkey,
+  gender varchar(20),   
+  status varchar(2),		
+  created varchar(15),			
+  updated varchar(15) 			
+);
+
+***********************************************************
+
+create table public.vendor(
+  Vendor_Number varchar(10) not null distkey, 	
+  Vendor_Key long,				
+  delivery_charge float,			
+  Opening_time varchar(10),			
+  Opening_time2 varchar(10),			
+  commision varchar(20),			
+  Service_distance varchar(10)
+);
+
+************************************************************
+
+create table public.location(
+  location_key varchar(100) not null distkey,
+  location_type varchar(50),
+  latitud float,
+  longitud float ,
+  country varchar(100)
+);
+
+
+create table location_dimension (
+  location_key varchar(50) not null distkey sortkey,
+  location_type varchar(10),
+  latitud varchar(25),
+  longitud varchar(25),
+  country varchar(25)
+);
+
+***********************************************************
+
+create table public.date(
+  date_key integer not null distkey,
+  date_current varchar(12), 
+  date_of_week integer,
+  calendar_month integer ,
+  calendar_year integer ,
+  calendar_day_month integer ,
+  day_name  varchar(50),
+  month_name  varchar(50)
+);
+
+create table date_dimension (
+  date_key integer not null distkey sortkey,
+  date varchar(12),
+  date_of_week integer,
+  calendar_month integer,
+  calendar_year integer,
+  calendar_day_month integer,
+  day_name varchar(12),
+  month_name(12)
+);
+
+**************************************************************
+
+create table public.tagVendor(
+  Tag_Key varchar(10) not null distkey, 	
+  Tag_Name varchar(100)					
+);
+
+*************************************************************
+
+create table public.tagBridge(
+  Vendor_Number varchar(10) not null distkey,	
+  Tag_Key varchar(10) not null sortkey		
+);
+
+***********************************************************
+
+create table public.factTable(
+  order_key long not null distkey,		
+  vendor_key varchar(10) not null ,			
+  customer_key varchar(10) not null ,		
+  Location_key varchar(10) not null ,		
+  date_key integer not null ,
+  item_count integer,				
+  grand_total varchar(10),			
+  vendor_rating varchar(50),			
+  preparation_time varchar(50),			
+  driver_rating varchar(10),			
+  delivery_time varchar(50),				
+  delivered_time varchar(50),
+  vendor_discount_amountvarchar(10),		
+  deliverydistance varchar(10)		
+);
