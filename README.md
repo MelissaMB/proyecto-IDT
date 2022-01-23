@@ -42,3 +42,19 @@ Se le aplicará SCD tipo 1 a las siguientes dimensiones: <i>Orden Dimensión, Cu
 
 <h2>Arquitectura Funcional</h2>
 <img src="https://user-images.githubusercontent.com/18757517/150696635-0b4a95d2-5629-4f35-bbd5-f6f543c9c385.png" >
+
+<h3>Data sources:</h3>
+<p>Los datos son obtenidos en formato de csv de un repositorio de datos llamado Kaggle, siendo este un repositorio de datos que permite la exploración de distintos dataset que brindan los insumos necesarios para la creación de modelos en un entorno de ciencia de datos basado en la web. En este punto los datos son obtenido en su forma más pura, con muchas inconsistencias en formatos, campos vacíos etc.</p>
+<h3>Data lake:</h3>
+<p>
+  <i>Raw data zone</i>:
+Los datos se ingieren sin procesamiento y se almacenan en su formato nativo. Esta zona permite a los usuarios encontrar la versión original de los datos para sus análisis facilitar los tratamientos posteriores.
+  
+<i>Process zone</i>:
+En esta zona los usuarios pueden transformar los datos según sus requisitos y almacenar todos los datos intermedios. El procesamiento de datos incluye lotes y/o procesamiento en tiempo real. Esta zona permite a los usuarios procesar datos (selección, proyección, unión, agregación, etc.) para su análisis de datos.
+
+<i>Access zone</i>:
+La zona de acceso almacena todos los datos disponibles para el análisis de datos y proporciona el acceso a los datos. Esta zona permite el consumo de datos de autoservicio para diferentes análisis (informes, análisis estadístico, inteligencia empresarial análisis, algoritmos de aprendizaje automático).
+</p>
+<h3>Data Consumption</h3>
+<p>El consume de datos es a través de Power BI como una herramienta basada en la nube que permite unir diferentes fuentes de datos, analizarlos y presentar un análisis de estos a través de informes y paneles.</p>
