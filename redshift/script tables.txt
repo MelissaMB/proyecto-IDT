@@ -39,15 +39,6 @@ create table public.location(
   country varchar(100)
 );
 
-
-create table location_dimension (
-  location_key varchar(50) not null distkey sortkey,
-  location_type varchar(10),
-  latitud varchar(25),
-  longitud varchar(25),
-  country varchar(25)
-);
-
 ***********************************************************
 
 create table public.date(
@@ -61,16 +52,6 @@ create table public.date(
   month_name  varchar(50)
 );
 
-create table date_dimension (
-  date_key integer not null distkey sortkey,
-  date varchar(12),
-  date_of_week integer,
-  calendar_month integer,
-  calendar_year integer,
-  calendar_day_month integer,
-  day_name varchar(12),
-  month_name(12)
-);
 
 **************************************************************
 
